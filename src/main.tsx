@@ -3,10 +3,21 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Header from './components/header/header.tsx';
 import Hero from './components/hero/hero.tsx';
+import { heroDivider } from './components/hero/hero.tsx';
+import About from './components/about/about.tsx';
+import Projects from './components/projects/projects.tsx';
+import Contact from './components/contact/contact.tsx';
+import Footer from './components/footer/footer.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Header />
     <Hero />
+    {heroDivider()}
+    <About />
+    <Projects />
+    {heroDivider()}
+    <Contact />
+    <Footer />
   </StrictMode>,
 )

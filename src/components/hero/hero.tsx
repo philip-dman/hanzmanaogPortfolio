@@ -1,25 +1,49 @@
-import '../../index.css';
+import "../../index.css";
+import cropped from "../../assets/cropped.jpg";
 
 export default function Hero() {
-    return (
-        <div
-            className="hero min-h-screen"
-            style={{
-                backgroundImage:
-                    "url(https://i.pinimg.com/736x/3c/0f/b0/3c0fb0256dc3e97a6f77aec6bce93da7.jpg)",
-            }}
-        >
-            <div className="hero-overlay flex"></div>
-            <div className="hero-content text-left">
-                <div className="w-full">
-                    <h1 className="mb-5 text-4xl font-semibold">Hello, </h1>
-                    <h1 className="mb-5 text-5xl font-bold">Hanz Manaog here!</h1>
-                    <p className="mb-5">
-                        Currently a 4th year student taking <strong>Bachelor of Science in Information Technology</strong><br></br> at La Consolacion University Philippines
-                    </p>
-                    <button className="btn btn-primary">Show More</button>
-                </div>
+  return (
+    <div className="hero bg-base-200 h-200 w-screen" id="home">
+      <div className="hero-content flex-row gap-10 px-10 w-screen">
+        <div className="flex-col w-full space-y-5">
+          <div>
+            <h1 className="text-5xl font-bold">Hi 👋</h1>
+          </div>
+          <div>
+            <h1 className="text-5xl font-regular">I'm Hanz Manaog</h1>
+          </div>
+          <div>
+            <h1 className="text-6xl font-bold">Tech Enthusiast</h1>
+          </div>
+
+          <div className="avatar flex-row gap-10">
+            <div className="w-15 rounded-full">
+              <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" />
             </div>
+            <div className="w-15 rounded-full">
+              <img src="https://static.vecteezy.com/system/resources/previews/016/716/465/non_2x/gmail-icon-free-png.png" />
+            </div>
+            <div className="w-15 rounded-full">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png" />
+            </div>
+          </div>
+
+          <div>
+            <button className="btn btn-primary h-15 w-40 text-xl font-bold">
+              <a href="#about">Show more</a>
+            </button>
+          </div>
         </div>
-    );
+
+        <img
+          src={cropped}
+          className="w-100 h-100 rounded-full object-cover shadow-2xl"
+        />
+      </div>
+    </div>
+  );
+}
+
+export function heroDivider() {
+  return <div className="divider divider-primary"></div>;
 }
