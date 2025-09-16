@@ -1,0 +1,19 @@
+{
+    "card0": {
+        "title": "AI Assistant",
+        "content": "I created and AI assistant using N8N, Gemini LLM's, MCP server, and telegram bot API."
+    },
+    "card1": {
+        "title": "Project Management Tool",
+        "content": "I self-hosted Plane, a project management tool for agile kanban projects using Docker."
+    },
+    "card2": {
+        "title": "SafeHub",
+        "content": "Our team developed SafeHub, an online booking platform."
+
+    },
+    "card3": {
+        "title": "Gmail Automation",
+        "content": "I built an automatic email sorting workflow using N8N."
+    }
+}

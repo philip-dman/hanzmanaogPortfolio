@@ -3,6 +3,7 @@ import assistant from "../../assets/assistant.png";
 import plane from "../../assets/plane.png";
 import safeHub from "../../assets/safeHub.png";
 import gmailAuto from "../../assets/gmailAuto.png";
+import projectsData from './envProjects.json';
 
 export default function Projects() {
   return (
@@ -18,9 +19,9 @@ export default function Projects() {
             />
           </figure>
           <div className="card-body gap-5">
-            <h2 className="card-title text-xl font-bold">AI Assistant</h2>
+            <h2 className="card-title text-xl font-bold">{projectsData.card0.title}</h2>
             <p className="text-lg">
-              I created and AI assistant using N8N, Gemini LLM's, MCP server, and telegram bot API.
+              {projectsData.card0.content}
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary text-lg font-semibold">More</button>
@@ -36,9 +37,9 @@ export default function Projects() {
             />
           </figure>
           <div className="card-body gap-5">
-            <h2 className="card-title text-xl font-bold">Project Management Tool</h2>
+            <h2 className="card-title text-xl font-bold">{projectsData.card1.title}</h2>
             <p className="text-lg">
-              I self-hosted Plane, a project management tool for agile kanban projects using Docker.
+              {projectsData.card1.content}
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary text-lg font-semibold">More</button>
@@ -54,9 +55,9 @@ export default function Projects() {
             />
           </figure>
           <div className="card-body gap-5">
-            <h2 className="card-title text-xl font-bold">SafeHub</h2>
+            <h2 className="card-title text-xl font-bold">{projectsData.card2.title}</h2>
             <p className="text-lg">
-              Our team developed SafeHub, an online booking platform.
+              {projectsData.card2.content}
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary text-lg font-semibold">More</button>
@@ -72,9 +73,9 @@ export default function Projects() {
             />
           </figure>
           <div className="card-body gap-5">
-            <h2 className="card-title text-xl font-bold">Gmail Automation</h2>
+            <h2 className="card-title text-xl font-bold">{projectsData.card3.title}</h2>
             <p className="text-lg">
-              I built an automatic email sorting workflow using N8N.
+              {projectsData.card3.content}
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary text-lg font-semibold">More</button>

@@ -1,26 +1,26 @@
 import '../../index.css';
-import cropped from '../../assets/cropped.jpg';
+import profIcon from '../../assets/profIcon.jpg';
 
 export default function Header() {
     return (
         <div className="navbar bg-base-100 shadow-sm px-10 fixed top-0 left-0 w-full z-50">
             <div className="avatar">
                 <div className="w-10 rounded-full">
-                    <img src={cropped} />
+                    <img src={profIcon} />
                 </div>
             </div>
 
             <div className="text-xl font-bold px-3">Manaog</div>
 
             <div className="flex ml-auto gap-5">
-                <button className="btn btn-ghost"><a href="#home">Home</a></button>
-                <button className="btn btn-ghost"><a href="#about">About</a></button>
-                <button className="btn btn-ghost"><a href="#projects">Projects</a></button>
-                <button className="btn btn-ghost"><a href="#contact">Contact</a></button>
+                <button className="btn btn-ghost" onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} >Home</button>
+                <button className="btn btn-ghost" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} >About</button>
+                <button className="btn btn-ghost" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} >Projects</button>
+                <button className="btn btn-ghost" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} >Contact</button>
 
                 <label className="swap swap-rotate">
                     {/* this hidden checkbox controls the state */}
-                    <input type="checkbox" className="theme-controller" value="retro" />
+                    <input type="checkbox" className="theme-controller" value="light" />
 
                     {/* sun icon */}
                     <svg

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: halloween --default, retro;
+  themes: dark --default, light;
 }
 html {
   scroll-behavior: smooth;

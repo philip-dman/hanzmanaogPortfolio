@@ -1,5 +1,5 @@
 import "../../index.css";
-import cropped from "../../assets/cropped.jpg";
+import profIcon from "../../assets/profIcon.jpg";
 
 export default function Hero() {
   return (
@@ -29,14 +29,14 @@ export default function Hero() {
           </div>
 
           <div>
-            <button className="btn btn-primary h-15 w-40 text-xl font-bold">
-              <a href="#about">Show more</a>
+            <button className="btn btn-primary h-15 w-40 text-xl font-bold" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+              Show more
             </button>
           </div>
         </div>
 
         <img
-          src={cropped}
+          src={profIcon}
           className="w-100 h-100 rounded-full object-cover shadow-2xl"
         />
       </div>
