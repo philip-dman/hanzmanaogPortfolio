@@ -17,7 +17,12 @@ export default function Hero() {
           </div>
 
           <div className="avatar flex-row gap-10">
-            <div className="w-15 rounded-full">
+            <div
+              className="w-15 rounded-full"
+              onClick={() =>
+                window.open("https://github.com/philip-dman?tab=overview")
+              }
+            >
               <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" />
             </div>
             <div className="w-15 rounded-full">
@@ -29,7 +34,14 @@ export default function Hero() {
           </div>
 
           <div>
-            <button className="btn btn-primary h-15 w-40 text-xl font-bold" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+            <button
+              className="btn btn-primary h-15 w-40 text-xl font-bold"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Show more
             </button>
           </div>
@@ -46,4 +58,16 @@ export default function Hero() {
 
 export function heroDivider() {
   return <div className="divider divider-primary"></div>;
+}
+
+export function Banner() {
+  return (
+    <div className="avatar flex-row bg-base-300 px-10 py-5 gap-10">
+      <div className="flex-1 flex-row w-5 rounded-full">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+        Hello
+      </div>
+      <div className="flex-1">World</div>
+    </div>
+  );
 }

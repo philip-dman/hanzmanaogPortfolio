@@ -4,6 +4,7 @@ import './index.css'
 import Header from './components/header/header.tsx';
 import Hero from './components/hero/hero.tsx';
 import { heroDivider } from './components/hero/hero.tsx';
+import { Banner } from './components/hero/hero.tsx';
 import About from './components/about/about.tsx';
 import Projects from './components/projects/projects.tsx';
 import Contact from './components/contact/contact.tsx';
