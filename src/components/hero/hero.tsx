@@ -4,10 +4,19 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
+import techBg from "../../assets/tech bw bg.mp4";
 
 export default function Hero() {
   return (
-    <div className="hero bg-base-200 h-200 w-screen" id="home">
+    <div className="hero h-200 w-screen" id="home">
+      <video
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+        src={techBg}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <div className="hero-content flex-row gap-10 px-10 w-screen">
         <div className="flex-col w-screen space-y-5">
           <div>

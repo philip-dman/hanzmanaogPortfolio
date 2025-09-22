@@ -21,7 +21,7 @@ export default function Header() {
 
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
-          <input type="checkbox" className="theme-controller" value="light" />
+          <input type="checkbox" className="theme-controller" value="lofiMod" />
 
           {/* sun icon */}
           <svg
