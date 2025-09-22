@@ -1,11 +1,15 @@
 import "../../index.css";
 import profIcon from "../../assets/profIcon.jpg";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <div className="hero bg-base-200 h-200 w-screen" id="home">
       <div className="hero-content flex-row gap-10 px-10 w-screen">
-        <div className="flex-col w-full space-y-5">
+        <div className="flex-col w-screen space-y-5">
           <div>
             <h1 className="text-5xl font-bold">Hi 👋</h1>
           </div>
@@ -17,20 +21,10 @@ export default function Hero() {
           </div>
 
           <div className="avatar flex-row gap-10">
-            <div
-              className="w-15 rounded-full"
-              onClick={() =>
-                window.open("https://github.com/philip-dman?tab=overview")
-              }
-            >
-              <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" />
-            </div>
-            <div className="w-15 rounded-full">
-              <img src="https://static.vecteezy.com/system/resources/previews/016/716/465/non_2x/gmail-icon-free-png.png" />
-            </div>
-            <div className="w-15 rounded-full">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png" />
-            </div>
+            <FaGithub className="w-10 h-10" onClick={() => window.open("https://github.com/philip-dman?tab=overview")} />
+            <FaFacebook className="w-10 h-10" onClick={() => window.open("https://www.facebook.com/hanz.philip.manaog.2024/")} />
+            <MdEmail className="w-10 h-10" onClick={() => document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" })} />
+            <FaLinkedin className="w-10 h-10"/>
           </div>
 
           <div>

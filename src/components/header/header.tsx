@@ -17,7 +17,7 @@ export default function Header() {
         {headerBtnDefault("Home", "home")}
         {headerBtnDefault("About", "about")}
         {headerBtnDefault("Projects", "projects")}
-        {headerBtnDefault("Contact", "contact")}
+        {headerBtnDefault("Contacts", "contacts")}
 
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
@@ -53,7 +53,7 @@ export default function Header() {
             <li>{headerBtnDropdown("Home", "home")}</li>
             <li>{headerBtnDropdown("About", "about")}</li>
             <li>{headerBtnDropdown("Projects", "projects")}</li>
-            <li>{headerBtnDropdown("Contact", "contact")}</li>
+            <li>{headerBtnDropdown("Contacts", "contacts")}</li>
           </ul>
         </div>
       </div>
