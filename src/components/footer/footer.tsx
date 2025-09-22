@@ -3,7 +3,6 @@ import { VscGithub } from "react-icons/vsc";
 import { BsFacebook } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 
-
 export default function Footer() {
   return (
     <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">

@@ -9,7 +9,10 @@ let dockerIcon =
 
 export default function About() {
   return (
-    <div className="flex  flex-col md:flex-row h-hug w-full p-15 gap-5" id="about">
+    <div
+      className="flex  flex-col md:flex-row h-hug w-full p-15 gap-5"
+      id="about"
+    >
       <div className="flex flex-col h-full w-full md:w-1/2 gap-5 px-10">
         <h2 className="text-4xl font-bold text-center">About Me</h2>
         <p className="text-2xl text-justify leading-relaxed">

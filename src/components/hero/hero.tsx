@@ -21,10 +21,27 @@ export default function Hero() {
           </div>
 
           <div className="avatar flex-row gap-10">
-            <FaGithub className="w-10 h-10" onClick={() => window.open("https://github.com/philip-dman?tab=overview")} />
-            <FaFacebook className="w-10 h-10" onClick={() => window.open("https://www.facebook.com/hanz.philip.manaog.2024/")} />
-            <MdEmail className="w-10 h-10" onClick={() => document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" })} />
-            <FaLinkedin className="w-10 h-10"/>
+            <FaGithub
+              className="w-10 h-10"
+              onClick={() =>
+                window.open("https://github.com/philip-dman?tab=overview")
+              }
+            />
+            <FaFacebook
+              className="w-10 h-10"
+              onClick={() =>
+                window.open("https://www.facebook.com/hanz.philip.manaog.2024/")
+              }
+            />
+            <MdEmail
+              className="w-10 h-10"
+              onClick={() =>
+                document
+                  .getElementById("contacts")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            />
+            <FaLinkedin className="w-10 h-10" />
           </div>
 
           <div>

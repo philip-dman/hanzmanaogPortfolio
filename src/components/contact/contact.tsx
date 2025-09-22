@@ -4,7 +4,6 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { PiFacebookLogoBold } from "react-icons/pi";
 import { VscGithub } from "react-icons/vsc";
 
-
 import type { IconType } from "react-icons";
 import { useState } from "react";
 
@@ -73,7 +72,10 @@ export default function Contact() {
             ></textarea>
 
             <div className="card-actions justify-end">
-              <button className="btn btn-primary text-lg font-semibold" onClick={() => console.log(name)}>
+              <button
+                className="btn btn-primary text-lg font-semibold"
+                onClick={() => console.log(name)}
+              >
                 Send Message
               </button>
             </div>
@@ -92,4 +94,3 @@ function contactList(Icon: IconType, text: string) {
     </li>
   );
 }
-
