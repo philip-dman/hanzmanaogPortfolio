@@ -49,7 +49,7 @@ export default function Hero() {
 
         <img
           src={profIcon}
-          className="w-100 h-100 rounded-full object-cover shadow-2xl"
+          className="w-100 h-100 rounded-full object-cover shadow-2xl hidden md:block"
         />
       </div>
     </div>

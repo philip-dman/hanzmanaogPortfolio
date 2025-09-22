@@ -13,7 +13,7 @@ export default function Projects() {
     >
       <h2 className="text-4xl font-bold text-center">Projects</h2>
 
-      <div className="grid grid-cols-4 gap-5 place-items-center">
+      <div className="grid  grid-cols-1 md:grid-cols-4 gap-5 place-items-center">
         {cards(projectsData.card0.title, projectsData.card0.content, assistant)}
 
         {cards(projectsData.card1.title, projectsData.card1.content, plane)}
@@ -33,9 +33,7 @@ function cards(title: string, content: string, imgSrc: string) {
         <img src={imgSrc} />
       </figure>
       <div className="card-body gap-5">
-        <h2 className="card-title text-xl font-bold">
-          {title}
-        </h2>
+        <h2 className="card-title text-xl font-bold">{title}</h2>
         <p className="text-lg">{content}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary text-lg font-semibold">

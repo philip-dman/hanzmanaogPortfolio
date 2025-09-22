@@ -16,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
     <Hero />
     {heroDivider()}
     <About />
+    {heroDivider()}
     <Projects />
     {heroDivider()}
     <Contact />
