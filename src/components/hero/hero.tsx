@@ -4,14 +4,34 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
-import techBg from "../../assets/tech bw bg.mp4";
+
+import techBgDark from "../../assets/techBgDark.mp4";
+import techBgWhite from "../../assets/techBgWhite.mp4";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [theme, setTheme] = useState<string | null>(null);
+
+  useEffect(() => {
+    // DaisyUI sets data-theme on html element
+    const observer = new MutationObserver(() => {
+      setTheme(document.documentElement.getAttribute("data-theme"));
+    });
+    setTheme(document.documentElement.getAttribute("data-theme"));
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Use techBgWhite for lofiMod (light theme), otherwise use techBgDark (default or lofiModInverse)
+  const videoSrc = theme === "lofiMod" ? techBgWhite : techBgDark;
+  console.log("Current theme:", theme, "Video src:", videoSrc);
+
   return (
     <div className="hero h-200 w-screen" id="home">
       <video
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-        src={techBg}
+        key={theme} // Force remount on theme change
+        className="absolute inset-0 w-full h-full object-cover -z-10 opacity-70"
+        src={videoSrc}
         autoPlay
         loop
         muted
@@ -80,14 +100,36 @@ export function heroDivider() {
   return <div className="divider divider-primary"></div>;
 }
 
+import { TbBrandReact } from "react-icons/tb";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { RiJavascriptFill } from "react-icons/ri";
+import { LuFigma } from "react-icons/lu";
+import { SiN8N } from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+
+
 export function Banner() {
+  // List of icons to render
+  const icons = [
+    <SiN8N key="n8n" className="h-10 w-10" />,
+    <TbBrandReact key="react" className="h-10 w-10" />,
+    <FaHtml5 key="html" className="h-10 w-10" />,
+    <FaCss3Alt key="css" className="h-10 w-10" />,
+    <RiJavascriptFill key="js" className="h-10 w-10" />,
+    <LuFigma key="figma" className="h-10 w-10" />,
+    <FaGithub key="github" className="h-10 w-10" />,
+    <FaDocker key="docker" className="h-10 w-10" />,
+    <FaJava key="java" className="h-10 w-10" />,
+    <FaPython key="python" className="h-10 w-10" />,
+  ];
   return (
-    <div className="avatar flex-row bg-base-300 px-10 py-5 gap-10">
-      <div className="flex-1 flex-row w-5 rounded-full">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-        Hello
+    <div className="overflow-hidden w-full bg-base-200 px-10 py-5">
+      <div className="flex min-w-max gap-16 justify-between animate-banner-scroll">
+        {icons.concat(icons.concat(icons.concat(icons)))}
       </div>
-      <div className="flex-1">World</div>
     </div>
   );
 }

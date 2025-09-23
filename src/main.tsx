@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Header />
     <Hero />
-    {heroDivider()}
+    {Banner()}
     <About />
     {heroDivider()}
     <Projects />
