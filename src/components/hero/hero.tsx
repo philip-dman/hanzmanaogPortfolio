@@ -9,6 +9,7 @@ import techBgDark from "../../assets/techBgDark.mp4";
 import techBgWhite from "../../assets/techBgWhite.mp4";
 import { useEffect, useState } from "react";
 
+
 export default function Hero() {
   const [theme, setTheme] = useState<string | null>(null);
 
@@ -18,7 +19,10 @@ export default function Hero() {
       setTheme(document.documentElement.getAttribute("data-theme"));
     });
     setTheme(document.documentElement.getAttribute("data-theme"));
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
     return () => observer.disconnect();
   }, []);
 
@@ -109,7 +113,6 @@ import { SiN8N } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
-
 
 export function Banner() {
   // List of icons to render
