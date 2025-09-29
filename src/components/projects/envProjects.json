@@ -41,5 +41,20 @@
     "title": "Workflow to GitHub Repo Sync",
     "content": "I built a worflow on N8N to sync my workflow files to GitHub repository.",
     "details": "I built a workflow on N8N to sync my workflow files to a GitHub repository. This automation ensures that my workflows will have backups incase of emergencies, it autosaves daily on my github repository. This setup not only saves time but also reduces the risk of forgetting to update the repository after making changes."
+  },
+  {
+    "id": 7,
+    "image": "myWebsite.png",
+    "title": "This Portfolio Website",
+    "content": "I built this website using React, Tailwind CSS, and DaisyUI to showcase my work.",
+    "details": "I built this website using React, Tailwind CSS, and DaisyUI to showcase my work. The site features a modern design, responsive layout, and smooth animations to enhance the user experience. I also implemented various components to display my projects, skills, and contact information effectively."
+  },
+  {
+    "id": 8,
+    "image": "figmaProj.png",
+    "title": "Website Design in Figma",
+    "content": "I built the design prototype of most of my web projects using Figma.",
+    "details": "I built the design prototype of most of my web projects using Figma. This process involved creating wireframes, user flows, and high-fidelity mockups to visualize the final product. Figma's collaborative features allowed me to work closely with stakeholders and gather feedback throughout the design process."
   }
+
 ]
