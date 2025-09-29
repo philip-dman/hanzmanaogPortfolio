@@ -47,7 +47,7 @@ export default function Hero() {
             <h1 className="text-5xl font-bold">Hi 👋</h1>
           </div>
           <div>
-            <h1 className="text-5xl font-regular">I'm Hanz Manaog</h1>
+            <h1 className="text-5xl font-regular">I'm Hanz Philip Manaog</h1>
           </div>
           <div>
             <h1 className="text-6xl font-bold">Tech Enthusiast</h1>
@@ -121,7 +121,7 @@ export function Banner() {
     <TbBrandReact key="react" className="h-10 w-10" />,
     <FaHtml5 key="html" className="h-10 w-10" />,
     <FaCss3Alt key="css" className="h-10 w-10" />,
-    <RiJavascriptFill key="js" className="h-10 w-10" />,
+    <RiJavascriptFill key="javascript" className="h-10 w-10" />,
     <LuFigma key="figma" className="h-10 w-10" />,
     <FaGithub key="github" className="h-10 w-10" />,
     <FaDocker key="docker" className="h-10 w-10" />,
@@ -131,7 +131,9 @@ export function Banner() {
   return (
     <div className="overflow-hidden w-full bg-base-200 px-10 py-5">
       <div className="flex min-w-max gap-16 justify-between animate-banner-scroll">
-        {icons.concat(icons.concat(icons.concat(icons)))}
+        {icons}
+        {icons}
+        {icons}
       </div>
     </div>
   );

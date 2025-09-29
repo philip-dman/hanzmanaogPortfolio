@@ -9,6 +9,8 @@ import { useState } from "react";
 
 export default function Contact() {
   const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   return (
     <div className="flex flex-col h-full w-full p-15 gap-20" id="contacts">
@@ -60,7 +62,9 @@ export default function Contact() {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </g>
               </svg>
-              <input type="email" placeholder="mail@site.com" required />
+              <input type="email" placeholder="mail@site.com" value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required />
             </label>
             <div className="validator-hint hidden">
               Enter valid email address
@@ -69,12 +73,15 @@ export default function Contact() {
             <textarea
               className="textarea w-full h-full"
               placeholder="Message here..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
             ></textarea>
 
             <div className="card-actions justify-end">
               <button
                 className="btn btn-primary text-lg font-semibold"
-                onClick={() => console.log(name)}
+                onClick={() => console.log(name, email, message)}
               >
                 Send Message
               </button>

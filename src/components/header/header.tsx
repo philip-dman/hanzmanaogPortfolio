@@ -61,7 +61,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="text-xl font-bold px-3">Hanz Manaog</div>
+      <div className="text-xl font-bold px-3">Hanz Philip Manaog</div>
 
       <div className="flex ml-auto gap-5">
         {headerBtnDefault("Home", "home")}
