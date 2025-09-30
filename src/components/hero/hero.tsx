@@ -79,14 +79,14 @@ export default function Hero() {
 
           <div>
             <button
-              className="btn btn-primary h-15 w-40 text-xl font-bold"
+              className="btn btn-primary h-15 w-45 text-xl font-bold"
               onClick={() =>
                 document
-                  .getElementById("about")
+                  .getElementById("projects")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Show more
+              Check my work
             </button>
           </div>
         </div>
