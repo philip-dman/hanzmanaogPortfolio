@@ -2,6 +2,7 @@ import "../../index.css";
 import skillsData from "./envSkills.json";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Typewriter from "../../typewriter";
 
 const eskills = skillsData as {
   id: number;
@@ -24,8 +25,8 @@ export default function Skills() {
     >
       <div className="mockup-window bg-base-100 border border-base-300 shadow-lg">
         <h2 className="text-4xl font-bold text-center">My Skills</h2>
-        <div className="flex flex-col-reverse">
-          <div className="grid grid-cols-4 gap-5 p-5 place-items-center h-fit w-full">
+        <div className="flex flex-col-reverse place-items-center">
+          <div className="grid grid-cols-4 gap-5 md:gap-10 p-5 place-items-center h-fit w-full md:w-4/5">
             {eskills.map((skill) => {
               return (
                 <React.Fragment key={skill.id}>
@@ -67,7 +68,7 @@ function skillBtn(
     <motion.input
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="btn btn-square w-full h-full p-2"
+      className="btn btn-square w-full h-full p-2 text-semibold text-lg"
       type="radio"
       name="options"
       aria-label={name}
@@ -123,9 +124,9 @@ function skillDisplay(
       </div>
       <div className="flex justify-center w-full h-fit p-2 md:p-5">
         {details && (
-          <p className="details-display text-2xl text-center md:text-left">
-            {details}
-          </p>
+          <label className="details-display text-2xl text-center md:text-left">
+            <Typewriter text={details} typingSpeed={0.01} />
+          </label>
         )}
       </div>
     </div>

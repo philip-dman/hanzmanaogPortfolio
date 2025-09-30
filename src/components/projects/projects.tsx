@@ -2,6 +2,7 @@ import "../../index.css";
 import projectsData from "./envProjects.json";
 import { motion } from "framer-motion"; 
 import { useState } from 'react';
+import Typewriter from "../../typewriter";
 
 // Define the structure of a project object for type safety
 interface Project {
@@ -70,7 +71,7 @@ export default function Projects() {
               </figure>
               
               {/* The detailed description */}
-              <p className="py-4 text-lg whitespace-pre-line">{selectedProject.details}</p>
+              <label className="py-4 text-lg whitespace-pre-line"><Typewriter text={selectedProject.details} typingSpeed={0.005}/></label>
             </>
           )}
           

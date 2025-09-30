@@ -8,7 +8,8 @@ import { FaLinkedin } from "react-icons/fa";
 import techBgDark from "../../assets/techBgDark.mp4";
 import techBgWhite from "../../assets/techBgWhite.mp4";
 import { useEffect, useState } from "react";
-
+import { motion } from "framer-motion";
+import Typewriter from "../../typewriter";
 
 export default function Hero() {
   const [theme, setTheme] = useState<string | null>(null);
@@ -44,13 +45,33 @@ export default function Hero() {
       <div className="hero-content flex-row gap-10 px-10 w-screen">
         <div className="flex-col w-screen space-y-5">
           <div>
-            <h1 className="text-5xl font-bold">Hi 👋</h1>
+            <h1
+              className="text-5xl font-bold"
+            >
+              <Typewriter text="Hi 👋" />
+            </h1>
           </div>
           <div>
-            <h1 className="text-5xl font-regular">I'm Hanz Philip Manaog</h1>
+            <h1
+              className="text-5xl font-regular"
+            >
+              <Typewriter text="I'm Hanz Philip Manaog" startDelay={0.5} typingSpeed={0.05} />
+            </h1>
           </div>
           <div>
-            <h1 className="text-6xl font-bold">Tech Enthusiast</h1>
+            <h1
+              className="text-6xl font-bold flex flex-row items-center space-x-2"
+            >
+              <Typewriter text="Tech Enthusiast" startDelay={1.3} typingSpeed={0.05}/>
+              <motion.label
+                className="text-6xl font-extrabold items-baseline"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [0, 1, 0] }}
+                transition={{ duration: 0.8, repeat: Infinity, delay: 1.8 }}
+              >
+                |
+              </motion.label>
+            </h1>
           </div>
 
           <div className="avatar flex-row gap-10">
