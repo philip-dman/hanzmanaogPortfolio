@@ -9,6 +9,7 @@ import About from "./components/about/about.tsx";
 import Projects from "./components/projects/projects.tsx";
 import Contact from "./components/contact/contact.tsx";
 import Footer from "./components/footer/footer.tsx";
+import Skills from "./components/skills/skills.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
     <About />
     {heroDivider()}
     <Projects />
+    <Skills />
     {heroDivider()}
     <Contact />
     <Footer />

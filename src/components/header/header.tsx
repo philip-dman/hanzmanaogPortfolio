@@ -67,6 +67,7 @@ export default function Header() {
         {headerBtnDefault("Home", "home")}
         {headerBtnDefault("About", "about")}
         {headerBtnDefault("Projects", "projects")}
+        {headerBtnDefault("Skills", "skills")}
         {headerBtnDefault("Contacts", "contacts")}
 
         <ThemeToggleButton />
@@ -82,6 +83,7 @@ export default function Header() {
             <li>{headerBtnDropdown("Home", "home")}</li>
             <li>{headerBtnDropdown("About", "about")}</li>
             <li>{headerBtnDropdown("Projects", "projects")}</li>
+            <li>{headerBtnDropdown("Skills", "skills")}</li>
             <li>{headerBtnDropdown("Contacts", "contacts")}</li>
           </ul>
         </div>

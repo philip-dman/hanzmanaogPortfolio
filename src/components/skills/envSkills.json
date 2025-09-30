@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "N8N",
+        "icon": "n8n",
+        "description": "Intermediate"
+    },
+    {
+        "id": 2,
+        "name": "Docker",
+        "icon": "docker",
+        "description": "Beginner"
+    },
+    {
+        "id": 3,
+        "name": "React",
+        "icon": "react",
+        "description": "Beginner"
+    },
+    {
+        "id": 4,
+        "name": "Figma",
+        "icon": "figma",
+        "description": "bilat"
+    }
+]
