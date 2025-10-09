@@ -1,11 +1,9 @@
 import "../../index.css";
 import aboutData from "./envAbout.json";
-let n8nIcon =
-  "https://pbs.twimg.com/profile_images/1536335358803251202/-gASF0c6_400x400.png";
-let figmaIcon =
-  "https://play-lh.googleusercontent.com/hoVBnPBRehmXsCqESLXRH2E3OTxklkwKZlb1psn7imm0VUSobn2nevS9RRFWb9GM4-o";
-let dockerIcon =
-  "https://yt3.googleusercontent.com/vr50ZXiY9tM1xNgVT2cLt0sGSdL_xuvVYA0fPtzpB9-LNE32KN7bvq75Uwcz70xO-3S6Ts4zIQ=s900-c-k-c0x00ffffff-no-rj";
+import figmaIcon from "../../assets/figmaIcon.svg";
+import dockerIcon from "../../assets/dockerIcon.svg";
+import n8nIcon from "../../assets/n8nIcon.svg";
+
 
 export default function About() {
   return (

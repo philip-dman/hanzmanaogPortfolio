@@ -62,16 +62,29 @@ export default function Projects() {
               <h3 className="font-bold text-3xl mb-4 text-primary">{selectedProject.title}</h3>
               
               {/* Image for the expanded view */}
-              <figure className="mb-6 w-full h-72 overflow-hidden rounded-xl">
+              <motion.figure
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-6 w-full h-72 overflow-hidden rounded-xl"
+              >
                 <img
                   src={new URL(`../../assets/${selectedProject.image}`, import.meta.url).href}
                   alt={selectedProject.title}
                   className="w-full h-full object-cover"
                 />
-              </figure>
+              </motion.figure>
               
               {/* The detailed description */}
-              <label className="py-4 text-lg whitespace-pre-line"><Typewriter text={selectedProject.details} typingSpeed={0.005}/></label>
+              <label className="py-4 text-lg whitespace-pre-line">
+                <motion.div
+                  initial={{ opacity: 0 , y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  {selectedProject.details}
+                </motion.div>
+              </label>
             </>
           )}
           

@@ -81,7 +81,7 @@ export default function Contact() {
             <div className="card-actions justify-end">
               <button
                 className="btn btn-primary text-lg font-semibold"
-                onClick={() => console.log(name, email, message)}
+                onClick={() => console.log({ name, email, message })}
               >
                 Send Message
               </button>
@@ -101,3 +101,4 @@ function contactList(Icon: IconType, text: string) {
     </li>
   );
 }
+
